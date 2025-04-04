@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Blog</h1>
+            <a href="{{ url_for('add') }}" class="add-button">Add New Post</a>
+        </header>
+
+        <main>
+            {% if posts %}
+                {% for post in posts %}
+                    <article class="blog-post">
+                        <h2>{{ post.title }}</h2>
+                        <p class="author">By {{ post.author }}</p>
+                        <div class="content">
+                            {{ post.content }}
+                        </div>
+                        <div class="post-actions">
+                            <a href="{{ url_for('like', post_id=post.id) }}" class="like-button">
+                                ❤️ {{ post.likes if post.likes is defined else 0 }} Likes
+                            </a>
+                            <a href="{{ url_for('update', post_id=post.id) }}" class="update-button">
+                                Update Post
+                            </a>
+                            <a href="{{ url_for('delete', post_id=post.id) }}" class="delete-button" 
+                               onclick="return confirm('Are you sure you want to delete this post?')">
+                                Delete Post
+                            </a>
+                        </div>
+                    </article>
+                {% endfor %}
+            {% else %}
+                <p class="no-posts">No blog posts yet!</p>
+            {% endif %}
+        </main>
+    </div>
+</body>
+</html>
