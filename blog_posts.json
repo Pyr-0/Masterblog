@@ -12,23 +12,5 @@
         "title": "Second Post",
         "content": "This is another post.",
         "likes": 0
-    },
-    {
-        "id": 3,
-        "author": "me",
-        "title": "you",
-        "content": "fghfghfgh"
-    },
-    {
-        "id": 4,
-        "author": "fghfghfgh",
-        "title": "fghfghfgh",
-        "content": "fghfghfghfg"
-    },
-    {
-        "id": 5,
-        "author": "me",
-        "title": "you",
-        "content": "yesssss"
     }
 ]

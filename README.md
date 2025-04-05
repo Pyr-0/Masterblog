@@ -6,6 +6,9 @@ A dynamic blog application built with Flask, demonstrating core web development 
 
 This blog application is a practical implementation of a web-based content management system that allows users to create, read, update, and delete blog posts. It also includes additional features like post liking functionality.
 
+![Home Page](assets/index.png)
+*Figure 1: Home page displaying all blog posts with like functionality*
+
 ## 🎓 Learning Objectives
 
 Through this project, you'll gain hands-on experience with:
@@ -50,8 +53,12 @@ master_blog/
 │   ├── index.html     # Home page template
 │   ├── add.html       # Add post form template
 │   └── update.html    # Update post form template
-└── static/            # Static files
-    └── styles.css     # CSS styling
+├── static/            # Static files
+│   └── styles.css     # CSS styling
+└── assets/            # Screenshots and documentation assets
+    ├── index.png      # Home page screenshot
+    ├── add_post.png   # Add post form screenshot
+    └── update.png     # Update post form screenshot
 ```
 
 ## 🚀 Getting Started
@@ -87,14 +94,21 @@ master_blog/
 1. **View Posts**
    - Browse all blog posts on the home page
    - See post details including author, title, and content
+   - View like counts for each post
 
 2. **Create Posts**
    - Add new blog posts using a dedicated form
    - Input fields for author, title, and content
 
+![Add Post Form](assets/add_post.png)
+*Figure 2: Form for adding new blog posts*
+
 3. **Update Posts**
    - Edit existing posts
    - Modify author, title, and content
+
+![Update Post Form](assets/update.png)
+*Figure 3: Form for updating existing blog posts*
 
 4. **Delete Posts**
    - Remove unwanted posts from the blog
